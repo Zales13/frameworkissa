@@ -1,3 +1,3 @@
-      <div class=”title m-b-md”>
-CETTE PAGE EST INDISPONIBLE ! This  for only ‘{{$role}}’”
+      <div class=ï¿½title m-b-mdï¿½>
+CETTE PAGE EST INDISPONIBLE ! cest  pour les {{$role}} seulement !
 </div>

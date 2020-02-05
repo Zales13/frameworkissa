@@ -5,7 +5,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title> Liste des compétences</title>
+  <title> Liste des competences</title>
 </head>
 <body>
 <h1> Utilisateurs </h1>
