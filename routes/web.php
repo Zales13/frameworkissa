@@ -38,3 +38,16 @@ Route::get('/skill_user_delete/{id_supp}', function ($id_supp) {
 Route::post('update', 'UsersController@update');
 Route::post('delete', 'UsersController@delete');
 
+
+
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
+{
+Route::match(['get', 'post'], '/adminOnlyPage/', 'HomeController@admin');
+});
+
+
+Route::group(['middleware' => 'App\Http\Middleware\MemberMiddleware'], function()
+{
+Route::match(['get', 'post'], '/memberOnlyPage/', 'HomeController@member');
+});
+
