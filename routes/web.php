@@ -43,11 +43,13 @@ Route::post('delete', 'UsersController@delete');
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 {
 Route::match(['get', 'post'], '/adminOnlyPage/', 'HomeController@admin');
+Route::get('/adminOnlyPage','UsersController@afficher')->name('current_users_admin');
 });
 
 
 Route::group(['middleware' => 'App\Http\Middleware\MemberMiddleware'], function()
 {
 Route::match(['get', 'post'], '/memberOnlyPage/', 'HomeController@member');
+Route::get('/memberOnlyPage','UsersController@afficher')->name('current_users_member');
 });
 
