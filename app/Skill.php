@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Skill extends Model
 {
     /**
-     * Récupère les utilisateurs possédant cette compétences.
+     * Recupere les utilisateurs possedant cette competences.
      */
     public function users()
     {

@@ -19,8 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-
 Route::get('/users', 'UsersController@afficher')-> name('current_user');
 
 Route::get('/skill_user', 'UsersController@btn_skill')->name('skill_user');
@@ -53,3 +51,9 @@ Route::match(['get', 'post'], '/memberOnlyPage/', 'HomeController@member');
 Route::get('/memberOnlyPage','UsersController@afficher')->name('current_users_member');
 });
 
+
+
+Route::resource('users', 'UsersController' )->except([
+		'show', 'index',
+])->middleware('can:manage');
+Route::resource('users', 'UsersController')->only(['show'])->middleware('can:view');
